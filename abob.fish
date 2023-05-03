@@ -1,5 +1,5 @@
 #/bin/<><
-set pms apt-get pkg pkg_add pkgin brew pacman dnf emerge zypper kiss
+set pms apt-get pkg pkg_add pkgin brew pacman dnf emerge zypper kiss apk yum
 echo "your package manager located in: "
 for pm in $pms
 	if command -v $pm
@@ -39,4 +39,8 @@ else if test "$abob" = "zypper"
 	echo "zypper install vim (opensuse)"
 else if test "$abob" = "kiss"
 	echo "kiss install vim (kiss linux :O)"
+else if test "$abob" = "apk"
+	echo "apk add vim (alpine)"
+else if test "$abob" = "yum"
+	echo "yum install vim"
 end
